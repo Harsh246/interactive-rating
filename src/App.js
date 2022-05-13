@@ -7,9 +7,9 @@ function App() {
   const [submit, setSubmit] = useState(false);
 
   function setIt(e) {
-    console.log(e.target.getAttribute("name"));
+    console.log(e.target.getAttribute("id"));
 
-    let val = e.target.getAttribute("name");
+    let val = e.target.getAttribute("id");
 
     if (val) setSelected(val);
   }
@@ -22,13 +22,14 @@ function App() {
 
   return (
     <main className="app">
+      <h1 className="none">something</h1>
       <article className="card">
         <div className={submit ? "none" : "initial"}>
           <header className="icon">
             <img src={star} alt="star" />
           </header>
           <section className="content">
-            <h1>How did we do?</h1>
+            <h2>How did we do?</h2>
             <p>
               Please let us know how we did with your support request. All
               feedback is appreciated to help us improve our offering!
@@ -37,25 +38,25 @@ function App() {
 
           <div className="ratings" onClick={setIt}>
             <div
-              name="1"
+              id="1"
               className={selected === "1" ? "rating selected" : "rating"}
             >
               1
             </div>
             <div
-              name="2"
+              id="2"
               className={selected === "2" ? "rating selected" : "rating"}
             >
               2
             </div>
             <div
-              name="3"
+              id="3"
               className={selected === "3" ? "rating selected" : "rating"}
             >
               3
             </div>
             <div
-              name="4"
+              id="4"
               className={selected === "4" ? "rating selected" : "rating"}
             >
               4
@@ -78,7 +79,7 @@ function App() {
           <div className="result">You selected {selected} out of 5</div>
 
           <section className="content">
-            <h1>Thank you!</h1>
+            <h2>Thank you!</h2>
             <p>
               We appreciate you taking the time to give a rating. If you ever
               need more support, don’t hesitate to get in touch!
