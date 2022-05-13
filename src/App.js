@@ -23,13 +23,13 @@ function App() {
   return (
     <main className="app">
       <h1 className="none">something</h1>
-      <article className="card">
+      <div className="card">
         <div className={submit ? "none" : "initial"}>
           <header className="icon">
             <img src={star} alt="star" />
           </header>
           <section className="content">
-            <h2>How did we do?</h2>
+            <h1>How did we do?</h1>
             <p>
               Please let us know how we did with your support request. All
               feedback is appreciated to help us improve our offering!
@@ -62,7 +62,7 @@ function App() {
               4
             </div>
             <div
-              name="5"
+              id="5"
               className={selected === "5" ? "rating selected" : "rating"}
             >
               5
@@ -79,14 +79,14 @@ function App() {
           <div className="result">You selected {selected} out of 5</div>
 
           <section className="content">
-            <h2>Thank you!</h2>
+            <h1>Thank you!</h1>
             <p>
               We appreciate you taking the time to give a rating. If you ever
               need more support, don’t hesitate to get in touch!
             </p>
           </section>
         </div>
-      </article>
+      </div>
     </main>
   );
 }
