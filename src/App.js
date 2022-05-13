@@ -22,14 +22,14 @@ function App() {
 
   return (
     <main className="app">
-      <h1 className="none">something</h1>
+      <h1 className="heading">Interactive Rating</h1>
       <div className="card">
         <div className={submit ? "none" : "initial"}>
           <header className="icon">
             <img src={star} alt="star" />
           </header>
           <section className="content">
-            <h1>How did we do?</h1>
+            <h2>How did we do?</h2>
             <p>
               Please let us know how we did with your support request. All
               feedback is appreciated to help us improve our offering!
@@ -79,7 +79,7 @@ function App() {
           <div className="result">You selected {selected} out of 5</div>
 
           <section className="content">
-            <h1>Thank you!</h1>
+            <h2>Thank you!</h2>
             <p>
               We appreciate you taking the time to give a rating. If you ever
               need more support, don’t hesitate to get in touch!
